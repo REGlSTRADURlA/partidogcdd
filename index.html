@@ -1,0 +1,254 @@
+index.HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alberto Lizarazo - GCD</title>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #FFD600, #C0C0C0, #DAA520);
+      color: black;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeInDown 1.5s ease;
+    }
+    header img {
+      max-height: 100px;
+      margin: 10px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 10px 0;
+    }
+    header h2 {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+    .fecha {
+      font-size: 1em;
+      margin-top: 10px;
+      color: #222;
+      font-weight: bold;
+    }
+    nav {
+      background: #222;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #FFD600;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 1.5s ease;
+    }
+    section h2 {
+      color: #005BBB;
+      margin-bottom: 20px;
+    }
+    .foto-candidato {
+      display: block;
+      margin: 20px auto;
+      border-radius: 12px;
+      max-width: 300px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .foto-candidato:hover {
+      transform: scale(1.05);
+    }
+    .propuestas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    .logos {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .logos img {
+      max-height: 100px;
+      transition: transform 0.3s;
+    }
+    .logos img:hover {
+      transform: scale(1.1);
+    }
+    .btn-votar {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #D62828;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+    .btn-votar:hover {
+      background: #b71c1c;
+    }
+    .redes {
+      margin-top: 20px;
+    }
+    .redes a {
+      margin: 0 10px;
+      font-size: 1.5em;
+      color: #FFD600;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .redes a:hover {
+      color: #D62828;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Alberto Lizarazo</h1>
+  <h2><span id="typed"></span></h2>
+  <h3>Partido: Gobiernos de las Comunidades y Departamentos de Colombia (GCD)</h3>
+  <div class="logos">
+    <img src="LOGO.jpg" alt="Logo GCD">
+    <img src="COLOMBIA.jpg" alt="Mapa GCD Colombia">
+  </div>
+  <div class="fecha" id="fecha"></div>
+</header>
+
+<nav>
+  <a href="#quien-soy">¿Quién soy?</a>
+  <a href="#propuestas">Propuestas</a>
+  <a href="#problemas">Problemas</a>
+  <a href="#votar">Votar</a>
+</nav>
+
+<section id="quien-soy">
+  <h2>¿Quién soy?</h2>
+  <img src="ALBERTO.jpg" alt="Alberto Lizarazo" class="foto-candidato">
+  <p>Soy <strong>Alberto Lizarazo</strong>, candidato a la Presidencia de la República por el partido <strong>Gobiernos de las Comunidades y Departamentos de Colombia (GCD)</strong>. Mi propósito es construir un país más seguro, justo y con oportunidades reales para todos los colombianos.</p>
+</section>
+
+<section id="propuestas">
+  <h2>Lo que quiero para Colombia</h2>
+  <div class="propuestas">
+    <div class="card">
+      <h3>Seguridad</h3>
+      <p>Fortalecer la policía y el ejército, combatir la delincuencia y proteger a los líderes sociales en todo el país.</p>
+    </div>
+    <div class="card">
+      <h3>Economía y Empleo</h3>
+      <p>Impulsar la economía local, apoyar al agro y generar oportunidades para jóvenes y comunidades rurales.</p>
+    </div>
+    <div class="card">
+      <h3>Educación y Salud</h3>
+      <p>Asegurar acceso gratuito y de calidad a la educación, y fortalecer la salud en zonas urbanas y rurales.</p>
+    </div>
+    <div class="card">
+      <h3>Descentralización</h3>
+      <p>Dar más poder y presupuesto a departamentos y municipios, para que cada región decida sobre su desarrollo.</p>
+    </div>
+    <div class="card">
+      <h3>Tecnología e Innovación</h3>
+      <p>Promover el acceso a la tecnología, la conectividad y la formación digital para enfrentar los retos de la modernidad.</p>
+    </div>
+  </div>
+</section>
+
+<section id="problemas">
+  <h2>Los problemas de Colombia</h2>
+  <ul>
+    <li>Inseguridad en ciudades y carreteras.</li>
+    <li>Desempleo y falta de oportunidades para jóvenes.</li>
+    <li>Corrupción en las instituciones públicas.</li>
+    <li>Pobreza en el campo y abandono de comunidades rurales.</li>
+    <li>Inequidad en educación y salud.</li>
+    <li>Brecha tecnológica y falta de conectividad en zonas apartadas.</li>
+  </ul>
+</section>
+
+<section id="votar">
+  <h2>La solución está en votar por Alberto Lizarazo</h2>
+  <p>Tu voto es la voz de tu comunidad. Juntos construiremos un gobierno desde las comunidades y departamentos de Colombia. ¡La principal opción para el cambio está en tus manos!</p>
+  <a href="#" class="btn-votar">¡Vota por Alberto Lizarazo!</a>
+  <div class="redes">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Alberto Lizarazo - Partido GCD</p>
+</footer>
+
+<script>
+  var typed = new Typed('#typed', {
+    strings: ["Candidato Presidencial", "Por un país seguro", "Por un futuro con oportunidades", "Por la modernidad de Colombia"],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
+
+  function actualizarFecha() {
+    const fechaElemento = document.getElementById("fecha");
+    const ahora = new Date();
+    const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+    fechaElemento.textContent = "Última actualización: " + ahora.toLocaleDateString("es-ES", opciones);
+  }
+  setInterval(actualizarFecha, 1000);
+  actualizarFecha();
+</script>
+
+</body>
+</html>
