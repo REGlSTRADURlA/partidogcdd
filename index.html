@@ -93,6 +93,38 @@
     .card:hover {
       transform: translateY(-5px);
     }
+    /* Parlamentos (Testimonios) */
+    .parlamento {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .burbuja {
+      background: #FFD600;
+      color: #222;
+      padding: 15px 20px;
+      border-radius: 20px;
+      position: relative;
+      max-width: 80%;
+      font-style: italic;
+      animation: slideIn 1.5s ease;
+    }
+    .burbuja::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 20px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: #FFD600 transparent transparent transparent;
+    }
+    .persona {
+      font-weight: bold;
+      margin-top: 5px;
+      text-align: right;
+      color: #005BBB;
+    }
     footer {
       background: #222;
       color: white;
@@ -149,6 +181,10 @@
       from {opacity: 0; transform: translateY(-20px);}
       to {opacity: 1; transform: translateY(0);}
     }
+    @keyframes slideIn {
+      from {opacity: 0; transform: translateX(-50px);}
+      to {opacity: 1; transform: translateX(0);}
+    }
   </style>
 </head>
 <body>
@@ -168,6 +204,7 @@
   <a href="#quien-soy">¿Quién soy?</a>
   <a href="#propuestas">Propuestas</a>
   <a href="#problemas">Problemas</a>
+  <a href="#parlamento">La voz del pueblo</a>
   <a href="#votar">Votar</a>
 </nav>
 
@@ -180,6 +217,10 @@
 <section id="propuestas">
   <h2>Lo que quiero para Colombia</h2>
   <div class="propuestas">
+    <div class="card">
+      <h3>Tecnología, Ciencia e Innovación</h3>
+      <p>Aumentar en 3 puntos el presupuesto de la Nación para fortalecer la investigación, ciencia, innovación y tecnología.</p>
+    </div>
     <div class="card">
       <h3>Seguridad</h3>
       <p>Fortalecer la policía y el ejército, combatir la delincuencia y proteger a los líderes sociales en todo el país.</p>
@@ -194,11 +235,11 @@
     </div>
     <div class="card">
       <h3>Descentralización</h3>
-      <p>Dar más poder y presupuesto a departamentos y municipios, para que cada región decida sobre su desarrollo.</p>
+      <p>Más poder y presupuesto a departamentos y municipios, para que cada región decida sobre su desarrollo.</p>
     </div>
     <div class="card">
-      <h3>Tecnología e Innovación</h3>
-      <p>Promover el acceso a la tecnología, la conectividad y la formación digital para enfrentar los retos de la modernidad.</p>
+      <h3>Infraestructura y Conectividad</h3>
+      <p>Reducir la brecha tecnológica, llevar conectividad, mejorar vías y garantizar servicios públicos en zonas apartadas.</p>
     </div>
   </div>
 </section>
@@ -206,13 +247,23 @@
 <section id="problemas">
   <h2>Los problemas de Colombia</h2>
   <ul>
-    <li>Inseguridad en ciudades y carreteras.</li>
+    <li>Inseguridad en ciudades, campos, carreteras y fronteras.</li>
+    <li>Corrupción en las instituciones públicas y mixtas.</li>
+    <li>Pobreza en el campo y abandono en saneamiento básico, salud y educación.</li>
     <li>Desempleo y falta de oportunidades para jóvenes.</li>
-    <li>Corrupción en las instituciones públicas.</li>
-    <li>Pobreza en el campo y abandono de comunidades rurales.</li>
-    <li>Inequidad en educación y salud.</li>
-    <li>Brecha tecnológica y falta de conectividad en zonas apartadas.</li>
+    <li>Brecha tecnológica, falta de conectividad, vías y servicios públicos en zonas apartadas.</li>
   </ul>
+</section>
+
+<section id="parlamento">
+  <h2>La voz del pueblo</h2>
+  <div class="parlamento">
+    <div class="burbuja">“Alberto representa esperanza para las regiones olvidadas.”<div class="persona">- Campesino de Santander</div></div>
+    <div class="burbuja">“Necesitamos más inversión en ciencia, tecnología e innovación. ¡Él sí lo propone!”<div class="persona">- Estudiante Universitario</div></div>
+    <div class="burbuja">“Estoy cansada de la corrupción, Alberto es un cambio verdadero.”<div class="persona">- Madre de familia en Bogotá</div></div>
+    <div class="burbuja">“El campo merece apoyo real, y esta vez sí hay alguien que nos escucha.”<div class="persona">- Agricultor de Boyacá</div></div>
+    <div class="burbuja">“En mi vereda no hay internet ni agua potable, confiamos en Alberto para cerrar esa brecha.”<div class="persona">- Joven de la Guajira</div></div>
+  </div>
 </section>
 
 <section id="votar">
@@ -251,4 +302,3 @@
 
 </body>
 </html>
-
